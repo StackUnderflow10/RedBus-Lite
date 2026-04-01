@@ -10,6 +10,9 @@ app.use(express.json())
 const busRoutes = require("./controllers/busController");
 app.use("/buses",busRoutes)
 
+app.use("/auth", require("./routes/authRoutes"));
+app.use("/bookings", require("./routes/bookingRoutes"));
+
 
 app.listen(5000, () => {
     console.log("Server running on port 5000");

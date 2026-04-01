@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios';
+import Modal from '../components/Modal';
 
 const AuthModal = ({ isOpen, onClose, onSuccess, originRect }) => {
     const [mode, setMode] = useState('login')
