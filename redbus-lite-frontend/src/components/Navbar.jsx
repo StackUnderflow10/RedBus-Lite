@@ -1,4 +1,6 @@
-const Navbar = ({ user, onSearchClick, onAddClick, onSignInClick, onMyTicketsClick, onLogout }) => {
+import React from 'react';
+
+const Navbar = ({ user, onAddClick, onSignInClick, onMyTicketsClick, onLogout }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 bg-[#0e0e0e]/80 backdrop-blur-md border-b border-[#1e1e1e]">
       {/* Logo */}
@@ -11,21 +13,11 @@ const Navbar = ({ user, onSearchClick, onAddClick, onSignInClick, onMyTicketsCli
             <circle cx="18.5" cy="18.5" r="2.5"/>
           </svg>
         </div>
-        <span className="text-white font-semibold text-[1rem] tracking-tight">BusRoute</span>
+        <span className="text-white font-semibold text-[1rem] tracking-tight">ViaNova</span>
       </div>
 
       {/* Actions */}
       <div className="flex items-center gap-2">
-        <button
-          onClick={(e) => onSearchClick(e.currentTarget.getBoundingClientRect())}
-          className="flex items-center gap-2 text-[#888] hover:text-white bg-[#181818] hover:bg-[#222] border border-[#242424] hover:border-[#3a3a3a] px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-          </svg>
-          <span className="hidden sm:inline">Search</span>
-        </button>
-
         <button
           onClick={(e) => onAddClick(e.currentTarget.getBoundingClientRect())}
           className="flex items-center gap-2 text-[#888] hover:text-white bg-[#181818] hover:bg-[#222] border border-[#242424] hover:border-[#3a3a3a] px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200"
